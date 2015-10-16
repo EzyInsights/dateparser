@@ -241,6 +241,16 @@ class TestFreshnessDateDataParser(BaseTestCase):
         param('5 гадоў, 1 месяц, 6 тыдняў, 3 дні, 5 гадзін 1 хвіліну і 3 секунды таму назад',
               ago={'years': 5, 'months': 1, 'weeks': 6, 'days': 3, 'hours': 5, 'minutes': 1, 'seconds': 3},
               period='day'),
+
+        # Polish dates
+        param("wczoraj", ago={'days': 1}, period='day'),
+        param("1 godz. 2 minuty temu", ago={'hours': 1, 'minutes': 2}, period='day'),
+        param("2 lata, 3 miesiące, 1 tydzień, 2 dni, 4 godziny, 15 minut i 25 sekund temu",
+              ago={'years': 2, 'months': 3, 'weeks': 1, 'days': 2, 'hours': 4, 'minutes': 15, 'seconds': 25},
+              period='day'),
+        param("2 minuty temu", ago={'minutes': 2}, period='day'),
+        param("15 minut temu", ago={'minutes': 15}, period='day'),
+
         # Finnish dates
         param('eilen', ago={'days': 1}, period='day'),
         param('toissapäivänä', ago={'days': 2}, period='day'),
@@ -257,6 +267,7 @@ class TestFreshnessDateDataParser(BaseTestCase):
         param('1 vuosi 12 kuukautta', ago={'years': 1, 'months': 12}, period='month'),
         param('1000 vuotta sitten', ago={'years': 1000}, period='year'),
         param('juuri nyt', ago={'seconds': 0}, period='day'),
+
         # Swedish dates
         param('nyss', ago={'days': 0}, period='day'),
         param('igår', ago={'days': 1}, period='day'),
