@@ -287,10 +287,6 @@ class TestDateParser(BaseTestCase):
         # Polish dates
         param('14 sierpnia 2015 roku o 12:13', datetime(2015, 8, 14, 12, 13)),
         param('2012, wrz 13, 15:05', datetime(2012, 9, 13, 15, 5)),
-        # Numeric dates
-        param('06-17-2014', datetime(2014, 6, 17)),
-        param('13/03/2014', datetime(2014, 3, 13)),
-        param('11. 12. 2014, 08:45:39', datetime(2014, 11, 12, 8, 45, 39)),
         # Finnish dates
         param('Perjantai', datetime(2012, 11, 9)),
         param('Keskiviikko 09 Syyskuu 2015', datetime(2015, 9, 9, 0, 0)),
@@ -307,6 +303,10 @@ class TestDateParser(BaseTestCase):
         param('Maj. 9, 2012 14:57', datetime(2012, 5, 9, 14, 57)),
         param('ti, 14 Okt 2014 10:55:50', datetime(2014, 10, 14, 10, 55, 50)),
         param('On, 14 Okt 2015 11:00:00 +0300', datetime(2015, 10, 14, 8, 0, 0)),
+        # Numeric dates
+        param('06-17-2014', datetime(2014, 6, 17)),
+        param('13/03/2014', datetime(2014, 3, 13)),
+        param('11. 12. 2014, 08:45:39', datetime(2014, 11, 12, 8, 45, 39)),
     ])
     def test_dates_parsing(self, date_string, expected):
         self.given_utcnow(datetime(2012, 11, 13))  # Tuesday
