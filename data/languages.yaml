@@ -2054,3 +2054,227 @@ id:
         - seminggu: 1 minggu
         - sebulan: 1 bulan
         - setahun: 1 tahun
+
+se:
+    name: Swedish
+
+    skip: ["just", "den", "sta", "te", "ra", "dje", "nde", "precis"]
+
+    monday:
+        - mån
+        - må
+        - måndag
+    tuesday:
+        - tis
+        - ti
+        - tisdag
+    wednesday:
+        - ons
+        - 'on'
+        - onsdag
+    thursday:
+        - tors
+        - to
+        - torsdag
+    friday:
+        - fre
+        - fr
+        - fredag
+    saturday:
+        - lör
+        - lö
+        - lördag
+    sunday:
+        - sön
+        - sö
+        - söndag
+
+    january:
+        - jan
+        - januari
+    february:
+        - feb
+        - februari
+    march:
+        - mars
+    april:
+        - apr
+        - april
+    may:
+        - maj
+    june:
+        - juni
+    july:
+        - juli
+    august:
+        - aug
+        - augusti
+    september:
+        - sep
+        - sept
+        - september
+    october:
+        - okt
+        - oktober
+    november:
+        - nov
+        - november
+    december:
+        - dec
+        - december
+
+    year:
+        - år
+        - år
+    month:
+        - månad
+        - månader
+    week:
+        - vecka
+        - veckor
+    day:
+        - dag
+        - dagar
+    hour:
+        - h
+        - timme
+        - timmar
+    minute:
+        - minut
+        - minuter
+    second:
+        - s
+        - sek
+        - sekund
+        - sekunder
+
+    ago:
+        - sedan
+
+    simplifications:
+        - förrgår: 2 dag
+        - igår: 1 dag
+        - idag: 0 dagar
+        - förra (vecka|månad|år): 1 \1
+        - en: 1
+        - ett: 1
+        - (\d+)\s*hr(s?): \1 timme\2
+        - (\d+)\s*min(s?): \1 minut\2
+        - (\d+)\s*sec(s?): \1 dag\2
+        - middag: '12:00'
+        - midnatt: '00:00'
+        - (\d+)h(\d+)m?: \1:\2
+        - mindre än en minut sedan: 45 dag
+        - nyss: 0 dag
+        - nu: 0 dag
+
+fi:
+    name: Finnish
+
+    skip: ["juuri","noin"]
+
+    monday:
+        - ma
+        - maanantai
+    tuesday:
+        - ti
+        - tiistai
+    wednesday:
+        - ke
+        - keskiviikko
+    thursday:
+        - to
+        - torstai
+    friday:
+        - pe
+        - perjantai
+    saturday:
+        - la
+        - lauantai
+    sunday:
+        - su
+        - sunnuntai
+
+    january:
+        - tammi
+        - tammikuu
+    february:
+        - helmi
+        - helmikuu
+    march:
+        - maalis
+        - maaliskuu
+    april:
+        - huhti
+        - huhtikuu
+    may:
+        - touko
+        - toukokuu
+    june:
+        - kesä
+        - kesäkuu
+    july:
+        - heinä
+        - heinäkuu
+    august:
+        - elo
+        - elokuu
+    september:
+        - syys
+        - syyskuu
+    october:
+        - lok
+        - loka
+        - lokakuu
+    november:
+        - marras
+        - marraskuu
+    december:
+        - joulu
+        - joulukuu
+
+    year:
+        - vuosi
+        - vuotta
+        - vuonna
+    month:
+        - kuukausi
+        - kuukautta
+        - kuussa
+    week:
+        - viikko
+        - viikkoa
+    day:
+        - päivä
+        - päivää
+    hour:
+        - h
+        - tunti
+        - tuntia
+    minute:
+        - min
+        - minuutti
+        - minuuttia
+    second:
+        - s
+        - sekunti
+        - sekuntia
+
+    ago:
+        - sitten
+
+    simplifications:
+        - toissapäivänä: 2 päivää
+        - eilen: 1 päivä
+        - tänään: 0 päivää
+        - viime (viikko|kuussa|vuonna): 1 \1
+        - tunti: 1 tunti
+        - yksi: 1
+        - (\d+)\s*hr(s?): \1 tunti\2
+        - (\d+)\s*min(s?): \1 minuutti\2
+        - (\d+)\s*sec(s?): \1 sekunti\2
+        - keskipäivä: '12:00'
+        - keskiyö: '00:00'
+        - (\d+)h(\d+)m?: \1:\2
+        - alle 1 minuutti sitten: 45 sekuntia
+        - nyt: 0 sekuntia

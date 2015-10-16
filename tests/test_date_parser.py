@@ -25,7 +25,7 @@ class AutoDetectLanguageTest(BaseTestCase):
         super(AutoDetectLanguageTest, self).setUp()
 
         # Just a known subset so we can rely on test outcomes. Feel free to add, but not exclude or change order.
-        self.known_languages = ['en', 'fr', 'es', 'pt', 'ru', 'tr', 'cz']
+        self.known_languages = ['en', 'fr', 'es', 'pt', 'ru', 'tr', 'cz', 'se', 'fi']
 
         self.parser = NotImplemented
         self.detected_languages = NotImplemented
@@ -288,6 +288,22 @@ class TestDateParser(BaseTestCase):
         param('06-17-2014', datetime(2014, 6, 17)),
         param('13/03/2014', datetime(2014, 3, 13)),
         param('11. 12. 2014, 08:45:39', datetime(2014, 11, 12, 8, 45, 39)),
+        # Finnish dates
+        param('Perjantai', datetime(2012, 11, 9)),
+        param('Keskiviikko 09 Syyskuu 2015', datetime(2015, 9, 9, 0, 0)),
+        param('Marras 25 2014 22:17 EST', datetime(2014, 11, 26, 3, 17)),
+        param('Ke Elo 05 12:00:00 EDT 2015', datetime(2015, 8, 5, 16, 0)),
+        param('Elo. 9, 2012 14:57', datetime(2012, 8, 9, 14, 57)),
+        param('Ti, 14 Lok 2014 10:55:50', datetime(2014, 10, 14, 10, 55, 50)),
+        param('Ke, 14 Lok 2015 11:00:00 +0300', datetime(2015, 10, 14, 8, 0, 0)),
+        # Swedish dates
+        param('Fredag', datetime(2012, 11, 9)),
+        param('Onsdag 09 September 2015', datetime(2015, 9, 9, 0, 0)),
+        param('Nov 25 2014 22:17 EST', datetime(2014, 11, 26, 3, 17)),
+        param('Ons Maj 05 12:00:00 EDT 2015', datetime(2015, 5, 5, 16, 0)),
+        param('Maj. 9, 2012 14:57', datetime(2012, 5, 9, 14, 57)),
+        param('ti, 14 Okt 2014 10:55:50', datetime(2014, 10, 14, 10, 55, 50)),
+        param('On, 14 Okt 2015 11:00:00 +0300', datetime(2015, 10, 14, 8, 0, 0)),
     ])
     def test_dates_parsing(self, date_string, expected):
         self.given_utcnow(datetime(2012, 11, 13))  # Tuesday
