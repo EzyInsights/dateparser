@@ -119,18 +119,25 @@ de:
     skip: ["um", "uhr", "etwa", "und"]
 
     monday:
+        - Mo
         - Montag
     tuesday:
+        - Di
         - Dienstag
     wednesday:
+        - Mi
         - Mittwoch
     thursday:
+        - Do
         - Donnerstag
     friday:
+        - Fr
         - Freitag
     saturday:
+        - Sa
         - Samstag
     sunday:
+        - So
         - Sonntag
 
     january:

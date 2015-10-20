@@ -263,6 +263,7 @@ class TestDateParser(BaseTestCase):
         param('19. Februar 2012', datetime(2012, 2, 19)),
         param('26. Juli 2014', datetime(2014, 7, 26)),
         param('18.10.14 um 22:56 Uhr', datetime(2014, 10, 18, 22, 56)),
+        param('Mo, 19 Okt 2015 16:26:15 +0100', datetime(2015, 10, 19, 15, 26, 15)),
         # Czech dates
         param('pon 16. čer 2014 10:07:43', datetime(2014, 6, 16, 10, 7, 43)),
         param('13 Srpen, 2014', datetime(2014, 8, 13)),
