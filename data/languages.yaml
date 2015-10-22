@@ -496,23 +496,29 @@ pt:
     pertain: ["de"]
 
     monday:
+        - Seg
         - Segunda-feira
         - Segunda
     tuesday:
+        - Ter
         - Terça-feira
         - Terça
     wednesday:
         - Quarta-feira
         - Quarta
     thursday:
+        - Qui
         - Quinta-feira
         - Quinta
     friday:
+        - Sex
         - Sexta-feira
         - Sexta
     saturday:
+        - Sáb
         - Sábado
     sunday:
+        - Dom
         - Domingo
 
     january:
