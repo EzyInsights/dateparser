@@ -315,18 +315,25 @@ es:
     pertain: ["de", "del"]
 
     monday:
+        - Lun
         - Lunes
     tuesday:
+        - Mar
         - Martes
     wednesday:
+        - Mié
         - Miércoles
     thursday:
+        - Jue
         - Jueves
     friday:
+        - Viw
         - Viernes
     saturday:
+        - Sáb
         - Sábado
     sunday:
+        - Dom
         - Domingo
 
     january:
@@ -407,18 +414,25 @@ it:
     skip: ["circa", "e"]
 
     monday:
+        - Lun
         - Lunedi
     tuesday:
+        - Mar
         - Martedì
     wednesday:
+        - Mer
         - Mercoledì
     thursday:
+        - Gio
         - Giovedi
     friday:
+        - Ven
         - Venerdì
     saturday:
+        - Sab
         - Sabato
     sunday:
+        - Dom
         - Domenica
 
     january:
